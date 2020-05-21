@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active:
+      - dev
+---
+spring:
+  profiles: dev   #開発環境
+  application:
+    name: microservicecloud-config-atguigu-dev
+---
+spring:
+  profiles: test  #テスト環境
+  application:
+    name: microservicecloud-config-atguigu-test
+#UTF-8でご保存下さい
+
