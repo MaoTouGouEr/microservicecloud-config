@@ -1,0 +1,53 @@
+spring:
+  profiles:
+    active:
+      - dev
+---
+server: 
+  port: 7001
+  
+spring:
+  profiles: dev
+  application:
+    name: git-server-register-center
+
+eureka:
+  instance:
+    hostname: eureka7001.com
+
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+info:
+  app.name: atguigu-microservice
+  company.name: www.atguigu.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+---
+server: 
+  port: 7002
+  
+spring:
+  profiles: test
+  application:
+    name: git-server-register-center
+
+eureka:
+  instance:
+    hostname: eureka7002.com
+
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+info:
+  app.name: atguigu-microservice
+  company.name: www.atguigu.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+  
