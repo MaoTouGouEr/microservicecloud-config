@@ -9,7 +9,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-PROD.com:7001/eureka/
+      defaultZone: http://eureka-Prod.com:7001/eureka/
 ---
 server:
   port: 8204
@@ -22,4 +22,4 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-MAINTENANCE.com:7001/eureka/
+      defaultZone: http://eureka-Maintenance.com:7001/eureka/
